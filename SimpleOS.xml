@@ -1,0 +1,525 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.12.0"/>
+    <errors>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;isr.h&amp;quot; not found." verbose="Include file: &amp;quot;isr.h&amp;quot; not found.">
+            <location file="src\8259_pic.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\8259_pic.c" line="7"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\8259_pic.c" line="8"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;8259_pic.h&amp;quot; not found." verbose="Include file: &amp;quot;8259_pic.h&amp;quot; not found.">
+            <location file="src\8259_pic.c" line="9"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;bios32.h&amp;quot; not found." verbose="Include file: &amp;quot;bios32.h&amp;quot; not found.">
+            <location file="src\bios32.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;gdt.h&amp;quot; not found." verbose="Include file: &amp;quot;gdt.h&amp;quot; not found.">
+            <location file="src\bios32.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\bios32.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\bios32.c" line="5"/>
+        </error>
+        <error id="redundantInitialization" severity="style" msg="Redundant initialization for &amp;#039;in_reg16_address&amp;#039;. The initialized value is overwritten before it is read." verbose="Redundant initialization for &amp;#039;in_reg16_address&amp;#039;. The initialized value is overwritten before it is read." cwe="563" file0="src/bios32.c">
+            <location file="src\bios32.c" line="58" info="in_reg16_address is overwritten"/>
+            <location file="src\bios32.c" line="48" info="in_reg16_address is initialized"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;in&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;in&amp;#039; can be declared as pointer to const" cwe="398" file0="src/bios32.c">
+            <location file="src\bios32.c" line="34"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vga.h&amp;quot; not found." verbose="Include file: &amp;quot;vga.h&amp;quot; not found.">
+            <location file="src\console.h" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;bitmap.h&amp;quot; not found." verbose="Include file: &amp;quot;bitmap.h&amp;quot; not found.">
+            <location file="src\bitmap.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;font8x8.h&amp;quot; not found." verbose="Include file: &amp;quot;font8x8.h&amp;quot; not found.">
+            <location file="src\bitmap.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vesa.h&amp;quot; not found." verbose="Include file: &amp;quot;vesa.h&amp;quot; not found.">
+            <location file="src\bitmap.c" line="3"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;temp&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;temp&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/bitmap.c">
+            <location file="src\bitmap.c" line="6"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;pix_data&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;pix_data&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/bitmap.c">
+            <location file="src\bitmap.c" line="6"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;temp&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;temp&amp;#039; is assigned a value that is never used." cwe="563" file0="src/bitmap.c">
+            <location file="src\bitmap.c" line="6"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;pix_data&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;pix_data&amp;#039; is assigned a value that is never used." cwe="563" file0="src/bitmap.c">
+            <location file="src\bitmap.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\console.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;types.h&amp;quot; not found." verbose="Include file: &amp;quot;types.h&amp;quot; not found.">
+            <location file="src\console.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vga.h&amp;quot; not found." verbose="Include file: &amp;quot;vga.h&amp;quot; not found.">
+            <location file="src\console.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;keyboard.h&amp;quot; not found." verbose="Include file: &amp;quot;keyboard.h&amp;quot; not found.">
+            <location file="src\console.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;ext2.h&amp;quot; not found." verbose="Include file: &amp;quot;ext2.h&amp;quot; not found.">
+            <location file="src\ext2.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;ide.h&amp;quot; not found." verbose="Include file: &amp;quot;ide.h&amp;quot; not found.">
+            <location file="src\ext2.c" line="7"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\ext2.c" line="8"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;kheap.h&amp;quot; not found." verbose="Include file: &amp;quot;kheap.h&amp;quot; not found.">
+            <location file="src\ext2.c" line="9"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;panic.h&amp;quot; not found." verbose="Include file: &amp;quot;panic.h&amp;quot; not found.">
+            <location file="src\ext2.c" line="10"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;next&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;next&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="149"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;next&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;next&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="181"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="35"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="42"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;bgdt_tmp&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;bgdt_tmp&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="47"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="84"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;from&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;from&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="103"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;dirent_name&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;dirent_name&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="171"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="272"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;sb&amp;#039; can be declared as pointer to const" cwe="398" file0="src/ext2.c">
+            <location file="src\ext2.c" line="281"/>
+        </error>
+        <error id="pointerSize" severity="warning" msg="Size of pointer &amp;#039;dir&amp;#039; used instead of size of its data." verbose="Size of pointer &amp;#039;dir&amp;#039; used instead of size of its data. This is likely to lead to a buffer overflow. You probably intend to write &amp;#039;sizeof(*dir)&amp;#039;." cwe="467" file0="src/ext2.c">
+            <location file="src\ext2.c" line="174"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: i" verbose="Uninitialized variable: i" cwe="457" file0="src/ext2.c">
+            <location file="src\ext2.c" line="162"/>
+        </error>
+        <error id="uninitvar" severity="warning" msg="Uninitialized variable: i" verbose="Uninitialized variable: i" cwe="457" file0="src/ext2.c">
+            <location file="src\ext2.c" line="177"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;bgdt_tmp&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;bgdt_tmp&amp;#039; is assigned a value that is never used." cwe="563" file0="src/ext2.c">
+            <location file="src\ext2.c" line="47"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;index_in_block&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;index_in_block&amp;#039; is assigned a value that is never used." cwe="563" file0="src/ext2.c">
+            <location file="src\ext2.c" line="99"/>
+        </error>
+        <error id="unassignedVariable" severity="style" msg="Variable &amp;#039;i&amp;#039; is not assigned a value." verbose="Variable &amp;#039;i&amp;#039; is not assigned a value." cwe="665" file0="src/ext2.c">
+            <location file="src\ext2.c" line="150"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;end&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;end&amp;#039; is assigned a value that is never used." cwe="563" file0="src/ext2.c">
+            <location file="src\ext2.c" line="222"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;fat32.h&amp;quot; not found." verbose="Include file: &amp;quot;fat32.h&amp;quot; not found.">
+            <location file="src\fat32.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;ide.h&amp;quot; not found." verbose="Include file: &amp;quot;ide.h&amp;quot; not found.">
+            <location file="src\fat32.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\fat32.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;kheap.h&amp;quot; not found." verbose="Include file: &amp;quot;kheap.h&amp;quot; not found.">
+            <location file="src\fat32.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;panic.h&amp;quot; not found." verbose="Include file: &amp;quot;panic.h&amp;quot; not found.">
+            <location file="src\fat32.c" line="6"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &amp;#039;!&amp;#039; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="85"/>
+        </error>
+        <error id="clarifyCondition" severity="style" msg="Boolean result is used in bitwise operation. Clarify expression with parentheses." verbose="Suspicious expression. Boolean result is used in bitwise operation. The operator &amp;#039;!&amp;#039; and the comparison operators have higher precedence than bitwise operators. It is recommended that the expression is clarified with parentheses." cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="139"/>
+        </error>
+        <error id="duplicateBreak" severity="style" msg="Consecutive return, break, continue, goto or throw statements are unnecessary." verbose="Consecutive return, break, continue, goto or throw statements are unnecessary. The second statement can never be executed, and so should be removed." cwe="561" file0="src/fat32.c">
+            <location file="src\fat32.c" line="164"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;byte_pos&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;byte_pos&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="95"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;LFN_char&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;LFN_char&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="96"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;byte_pos&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;byte_pos&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="149"/>
+        </error>
+        <error id="variableScope" severity="style" msg="The scope of the variable &amp;#039;LFN_char&amp;#039; can be reduced." verbose="The scope of the variable &amp;#039;LFN_char&amp;#039; can be reduced. Warning: Be careful when fixing this message, especially when there are inner loops. Here is an example where cppcheck will write that the scope for &amp;#039;i&amp;#039; can be reduced:&#10;void f(int x)&#10;{&#10;    int i = 0;&#10;    if (x) {&#10;        // it&amp;#039;s safe to move &amp;#039;int i = 0;&amp;#039; here&#10;        for (int n = 0; n &amp;lt; 10; ++n) {&#10;            // it is possible but not safe to move &amp;#039;int i = 0;&amp;#039; here&#10;            do_something(&amp;amp;i);&#10;        }&#10;    }&#10;}&#10;When you see this message it is always safe to reduce the variable scope 1 level." cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="150"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;fpath&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;fpath&amp;#039; can be declared as pointer to const" cwe="398" file0="src/fat32.c">
+            <location file="src\fat32.c" line="247"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;cluster_index&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;cluster_index&amp;#039; is assigned a value that is never used." cwe="563" file0="src/fat32.c">
+            <location file="src\fat32.c" line="69"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;cluster_index&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;cluster_index&amp;#039; is assigned a value that is never used." cwe="563" file0="src/fat32.c">
+            <location file="src\fat32.c" line="126"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;gdt.h&amp;quot; not found." verbose="Include file: &amp;quot;gdt.h&amp;quot; not found.">
+            <location file="src\gdt.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;gui.h&amp;quot; not found." verbose="Include file: &amp;quot;gui.h&amp;quot; not found.">
+            <location file="src\gui.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;ide.h&amp;quot; not found." verbose="Include file: &amp;quot;ide.h&amp;quot; not found.">
+            <location file="src\ide.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\ide.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\ide.c" line="4"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==0&amp;#039; is always true" verbose="Condition &amp;#039;dma==0&amp;#039; is always true" cwe="571" file0="src/ide.c">
+            <location file="src\ide.c" line="413" info="Condition &amp;#039;dma==0&amp;#039; is always true"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==0&amp;#039; is always true" verbose="Condition &amp;#039;dma==0&amp;#039; is always true" cwe="571" file0="src/ide.c">
+            <location file="src\ide.c" line="414" info="Condition &amp;#039;dma==0&amp;#039; is always true"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==0&amp;#039; is always true" verbose="Condition &amp;#039;dma==0&amp;#039; is always true" cwe="571" file0="src/ide.c">
+            <location file="src\ide.c" line="415" info="Condition &amp;#039;dma==0&amp;#039; is always true"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==1&amp;#039; is always false" verbose="Condition &amp;#039;dma==1&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="416" info="Condition &amp;#039;dma==1&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==1&amp;#039; is always false" verbose="Condition &amp;#039;dma==1&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="417" info="Condition &amp;#039;dma==1&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==1&amp;#039; is always false" verbose="Condition &amp;#039;dma==1&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="418" info="Condition &amp;#039;dma==1&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==0&amp;#039; is always true" verbose="Condition &amp;#039;dma==0&amp;#039; is always true" cwe="571" file0="src/ide.c">
+            <location file="src\ide.c" line="419" info="Condition &amp;#039;dma==0&amp;#039; is always true"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==0&amp;#039; is always true" verbose="Condition &amp;#039;dma==0&amp;#039; is always true" cwe="571" file0="src/ide.c">
+            <location file="src\ide.c" line="420" info="Condition &amp;#039;dma==0&amp;#039; is always true"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==0&amp;#039; is always true" verbose="Condition &amp;#039;dma==0&amp;#039; is always true" cwe="571" file0="src/ide.c">
+            <location file="src\ide.c" line="421" info="Condition &amp;#039;dma==0&amp;#039; is always true"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==1&amp;#039; is always false" verbose="Condition &amp;#039;dma==1&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="422" info="Condition &amp;#039;dma==1&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==1&amp;#039; is always false" verbose="Condition &amp;#039;dma==1&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="423" info="Condition &amp;#039;dma==1&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma==1&amp;#039; is always false" verbose="Condition &amp;#039;dma==1&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="424" info="Condition &amp;#039;dma==1&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="knownConditionTrueFalse" severity="style" msg="Condition &amp;#039;dma&amp;#039; is always false" verbose="Condition &amp;#039;dma&amp;#039; is always false" cwe="570" file0="src/ide.c">
+            <location file="src\ide.c" line="427" info="Condition &amp;#039;dma&amp;#039; is always false"/>
+            <location file="src\ide.c" line="388" info="Assignment &amp;#039;dma=0&amp;#039;, assigned value is 0"/>
+        </error>
+        <error id="uninitvar" severity="warning" msg="Uninitialized variable: err" verbose="Uninitialized variable: err" cwe="457" file0="src/ide.c">
+            <location file="src\ide.c" line="492" info=""/>
+            <location file="src\ide.c" line="489" info="Assuming condition is false"/>
+        </error>
+        <error id="uninitvar" severity="warning" msg="Uninitialized variable: err" verbose="Uninitialized variable: err" cwe="457" file0="src/ide.c">
+            <location file="src\ide.c" line="514" info=""/>
+            <location file="src\ide.c" line="511" info="Assuming condition is false"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\idt.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;isr.h&amp;quot; not found." verbose="Include file: &amp;quot;isr.h&amp;quot; not found.">
+            <location file="src\idt.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;8259_pic.h&amp;quot; not found." verbose="Include file: &amp;quot;8259_pic.h&amp;quot; not found.">
+            <location file="src\idt.c" line="7"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\io_ports.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;isr.h&amp;quot; not found." verbose="Include file: &amp;quot;isr.h&amp;quot; not found.">
+            <location file="src\isr.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\isr.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;8259_pic.h&amp;quot; not found." verbose="Include file: &amp;quot;8259_pic.h&amp;quot; not found.">
+            <location file="src\isr.c" line="3"/>
+        </error>
+        <error id="wrongPrintfScanfArgNum" severity="error" msg="printf format string requires 5 parameters but only 4 are given." verbose="printf format string requires 5 parameters but only 4 are given." cwe="685" file0="src/isr.c">
+            <location file="src\isr.c" line="78"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;kernel.h&amp;quot; not found." verbose="Include file: &amp;quot;kernel.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;gdt.h&amp;quot; not found." verbose="Include file: &amp;quot;gdt.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;keyboard.h&amp;quot; not found." verbose="Include file: &amp;quot;keyboard.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;mouse.h&amp;quot; not found." verbose="Include file: &amp;quot;mouse.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="7"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;multiboot.h&amp;quot; not found." verbose="Include file: &amp;quot;multiboot.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="8"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;gui.h&amp;quot; not found." verbose="Include file: &amp;quot;gui.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="9"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;ext2.h&amp;quot; not found." verbose="Include file: &amp;quot;ext2.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="10"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;ide.h&amp;quot; not found." verbose="Include file: &amp;quot;ide.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="11"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;tss.h&amp;quot; not found." verbose="Include file: &amp;quot;tss.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="12"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;pmm.h&amp;quot; not found." verbose="Include file: &amp;quot;pmm.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="13"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;kheap.h&amp;quot; not found." verbose="Include file: &amp;quot;kheap.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="14"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vesa.h&amp;quot; not found." verbose="Include file: &amp;quot;vesa.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="15"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;bitmap.h&amp;quot; not found." verbose="Include file: &amp;quot;bitmap.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="16"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;panic.h&amp;quot; not found." verbose="Include file: &amp;quot;panic.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="17"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;fat32.h&amp;quot; not found." verbose="Include file: &amp;quot;fat32.h&amp;quot; not found.">
+            <location file="src\kernel.c" line="18"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;mboot_info&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;mboot_info&amp;#039; can be declared as pointer to const" cwe="398" file0="src/kernel.c">
+            <location file="src\kernel.c" line="24"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;mmap&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;mmap&amp;#039; can be declared as pointer to const" cwe="398" file0="src/kernel.c">
+            <location file="src\kernel.c" line="51"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;b&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;b&amp;#039; can be declared as pointer to const" cwe="398" file0="src/kernel.c">
+            <location file="src\kernel.c" line="86"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;b&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;b&amp;#039; can be declared as pointer to const" cwe="398" file0="src/kernel.c">
+            <location file="src\kernel.c" line="93"/>
+        </error>
+        <error id="arithOperationsOnVoidPointer" severity="portability" msg="&amp;#039;start&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined." verbose="&amp;#039;start&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined. Arithmetic operations on &amp;#039;void *&amp;#039; is a GNU C extension, which defines the &amp;#039;sizeof(void)&amp;#039; to be 1." cwe="467" file0="src/kernel.c">
+            <location file="src\kernel.c" line="119"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;keyboard.h&amp;quot; not found." verbose="Include file: &amp;quot;keyboard.h&amp;quot; not found.">
+            <location file="src\keyboard.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\keyboard.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\keyboard.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;isr.h&amp;quot; not found." verbose="Include file: &amp;quot;isr.h&amp;quot; not found.">
+            <location file="src\keyboard.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;types.h&amp;quot; not found." verbose="Include file: &amp;quot;types.h&amp;quot; not found.">
+            <location file="src\keyboard.c" line="7"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\keyboard.c" line="8"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;kheap.h&amp;quot; not found." verbose="Include file: &amp;quot;kheap.h&amp;quot; not found.">
+            <location file="src\kheap.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;kernel.h&amp;quot; not found." verbose="Include file: &amp;quot;kernel.h&amp;quot; not found.">
+            <location file="src\kheap.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;pmm.h&amp;quot; not found." verbose="Include file: &amp;quot;pmm.h&amp;quot; not found.">
+            <location file="src\kheap.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\kheap.c" line="5"/>
+        </error>
+        <error id="invalidPrintfArgType_sint" severity="portability" msg="%d in format string (no. 1) requires &amp;#039;int&amp;#039; but the argument type is &amp;#039;size_t {aka unsigned long}&amp;#039;." verbose="%d in format string (no. 1) requires &amp;#039;int&amp;#039; but the argument type is &amp;#039;size_t {aka unsigned long}&amp;#039;." cwe="686" file0="src/kheap.c">
+            <location file="src\kheap.c" line="50"/>
+        </error>
+        <error id="invalidPrintfArgType_uint" severity="warning" msg="%x in format string (no. 4) requires &amp;#039;unsigned int&amp;#039; but the argument type is &amp;#039;KHEAP_BLOCK *&amp;#039;." verbose="%x in format string (no. 4) requires &amp;#039;unsigned int&amp;#039; but the argument type is &amp;#039;KHEAP_BLOCK *&amp;#039;." cwe="686" file0="src/kheap.c">
+            <location file="src\kheap.c" line="52"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;ptr&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;ptr&amp;#039; can be declared as pointer to const" cwe="398" file0="src/kheap.c">
+            <location file="src\kheap.c" line="141"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;addr&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;addr&amp;#039; can be declared as pointer to const" cwe="398" file0="src/kheap.c">
+            <location file="src\kheap.c" line="161"/>
+        </error>
+        <error id="arithOperationsOnVoidPointer" severity="portability" msg="&amp;#039;g_kheap_start_addr&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined." verbose="&amp;#039;g_kheap_start_addr&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined. Arithmetic operations on &amp;#039;void *&amp;#039; is a GNU C extension, which defines the &amp;#039;sizeof(void)&amp;#039; to be 1." cwe="467" file0="src/kheap.c">
+            <location file="src\kheap.c" line="40"/>
+        </error>
+        <error id="arithOperationsOnVoidPointer" severity="portability" msg="&amp;#039;g_kheap_start_addr+g_total_used_size&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined." verbose="&amp;#039;g_kheap_start_addr+g_total_used_size&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined. Arithmetic operations on &amp;#039;void *&amp;#039; is a GNU C extension, which defines the &amp;#039;sizeof(void)&amp;#039; to be 1." cwe="467" file0="src/kheap.c">
+            <location file="src\kheap.c" line="40"/>
+        </error>
+        <error id="arithOperationsOnVoidPointer" severity="portability" msg="&amp;#039;g_kheap_start_addr+g_total_used_size+size&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined." verbose="&amp;#039;g_kheap_start_addr+g_total_used_size+size&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined. Arithmetic operations on &amp;#039;void *&amp;#039; is a GNU C extension, which defines the &amp;#039;sizeof(void)&amp;#039; to be 1." cwe="467" file0="src/kheap.c">
+            <location file="src\kheap.c" line="40"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;mouse.h&amp;quot; not found." verbose="Include file: &amp;quot;mouse.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;8259_pic.h&amp;quot; not found." verbose="Include file: &amp;quot;8259_pic.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="8"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;idt.h&amp;quot; not found." verbose="Include file: &amp;quot;idt.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="10"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="11"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;isr.h&amp;quot; not found." verbose="Include file: &amp;quot;isr.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="12"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="13"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;types.h&amp;quot; not found." verbose="Include file: &amp;quot;types.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="14"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vesa.h&amp;quot; not found." verbose="Include file: &amp;quot;vesa.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="15"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;bitmap.h&amp;quot; not found." verbose="Include file: &amp;quot;bitmap.h&amp;quot; not found.">
+            <location file="src\mouse.c" line="16"/>
+        </error>
+        <error id="unreadVariable" severity="style" msg="Variable &amp;#039;prev_color&amp;#039; is assigned a value that is never used." verbose="Variable &amp;#039;prev_color&amp;#039; is assigned a value that is never used." cwe="563" file0="src/mouse.c">
+            <location file="src\mouse.c" line="134"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;panic.h&amp;quot; not found." verbose="Include file: &amp;quot;panic.h&amp;quot; not found.">
+            <location file="src\panic.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;pmm.h&amp;quot; not found." verbose="Include file: &amp;quot;pmm.h&amp;quot; not found.">
+            <location file="src\pmm.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\pmm.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;multiboot.h&amp;quot; not found." verbose="Include file: &amp;quot;multiboot.h&amp;quot; not found.">
+            <location file="src\pmm.c" line="4"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;string&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;string&amp;#039; can be declared as pointer to const" cwe="398" file0="src/serial.c">
+            <location file="src\serial.c" line="78"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\string.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;types.h&amp;quot; not found." verbose="Include file: &amp;quot;types.h&amp;quot; not found.">
+            <location file="src\string.c" line="2"/>
+        </error>
+        <error id="returnDanglingLifetime" severity="error" msg="Returning pointer to local variable &amp;#039;variable&amp;#039; that will be invalid when returning." verbose="Returning pointer to local variable &amp;#039;variable&amp;#039; that will be invalid when returning." cwe="562" file0="src/string.c">
+            <location file="src\string.c" line="170" info=""/>
+            <location file="src\string.c" line="169" info="Variable created here."/>
+            <location file="src\string.c" line="170" info="Address of variable taken here."/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;a&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;a&amp;#039; can be declared as pointer to const" cwe="398" file0="src/string.c">
+            <location file="src\string.c" line="54"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;b&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;b&amp;#039; can be declared as pointer to const" cwe="398" file0="src/string.c">
+            <location file="src\string.c" line="54"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;s2&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;s2&amp;#039; can be declared as pointer to const" cwe="398" file0="src/string.c">
+            <location file="src\string.c" line="81"/>
+        </error>
+        <error id="constParameterPointer" severity="style" msg="Parameter &amp;#039;ch&amp;#039; can be declared as pointer to const" verbose="Parameter &amp;#039;ch&amp;#039; can be declared as pointer to const" cwe="398" file0="src/string.c">
+            <location file="src\string.c" line="173"/>
+        </error>
+        <error id="uninitvar" severity="error" msg="Uninitialized variable: str" verbose="Uninitialized variable: str" cwe="457" file0="src/string.c">
+            <location file="src\string.c" line="200"/>
+        </error>
+        <error id="uninitvar" severity="warning" msg="Uninitialized variable: p" verbose="Uninitialized variable: p" cwe="457" file0="src/string.c">
+            <location file="src\string.c" line="149" info=""/>
+            <location file="src\string.c" line="139" info="Assuming condition is false"/>
+            <location file="src\string.c" line="133" info="Assignment &amp;#039;p=buf&amp;#039;, assigned value is &amp;lt;Uninit&amp;gt;"/>
+            <location file="src\string.c" line="200" info="Calling function &amp;#039;itoa&amp;#039;, 1st argument &amp;#039;str&amp;#039; value is &amp;lt;Uninit&amp;gt;"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;tss.h&amp;quot; not found." verbose="Include file: &amp;quot;tss.h&amp;quot; not found.">
+            <location file="src\tss.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;gdt.h&amp;quot; not found." verbose="Include file: &amp;quot;gdt.h&amp;quot; not found.">
+            <location file="src\tss.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\tss.c" line="3"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vesa.h&amp;quot; not found." verbose="Include file: &amp;quot;vesa.h&amp;quot; not found.">
+            <location file="src\vesa.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;bios32.h&amp;quot; not found." verbose="Include file: &amp;quot;bios32.h&amp;quot; not found.">
+            <location file="src\vesa.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\vesa.c" line="4"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;isr.h&amp;quot; not found." verbose="Include file: &amp;quot;isr.h&amp;quot; not found.">
+            <location file="src\vesa.c" line="5"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;string.h&amp;quot; not found." verbose="Include file: &amp;quot;string.h&amp;quot; not found.">
+            <location file="src\vesa.c" line="6"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;types.h&amp;quot; not found." verbose="Include file: &amp;quot;types.h&amp;quot; not found.">
+            <location file="src\vesa.c" line="7"/>
+        </error>
+        <error id="unreachableCode" severity="style" msg="Statements following &amp;#039;return&amp;#039; will never be executed." verbose="Statements following &amp;#039;return&amp;#039; will never be executed." cwe="561" file0="src/vesa.c">
+            <location file="src\vesa.c" line="42"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;mode_list&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;mode_list&amp;#039; can be declared as pointer to const" cwe="398" file0="src/vesa.c">
+            <location file="src\vesa.c" line="67"/>
+        </error>
+        <error id="constVariablePointer" severity="style" msg="Variable &amp;#039;mode_list&amp;#039; can be declared as pointer to const" verbose="Variable &amp;#039;mode_list&amp;#039; can be declared as pointer to const" cwe="398" file0="src/vesa.c">
+            <location file="src\vesa.c" line="85"/>
+        </error>
+        <error id="arithOperationsOnVoidPointer" severity="portability" msg="&amp;#039;(void*)BIOS_CONVENTIONAL_MEMORY&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined." verbose="&amp;#039;(void*)BIOS_CONVENTIONAL_MEMORY&amp;#039; is of type &amp;#039;void *&amp;#039;. When using void pointers in calculations, the behaviour is undefined. Arithmetic operations on &amp;#039;void *&amp;#039; is a GNU C extension, which defines the &amp;#039;sizeof(void)&amp;#039; to be 1." cwe="467" file0="src/vesa.c">
+            <location file="src\vesa.c" line="53"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;vga.h&amp;quot; not found." verbose="Include file: &amp;quot;vga.h&amp;quot; not found.">
+            <location file="src\vga.c" line="1"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;io_ports.h&amp;quot; not found." verbose="Include file: &amp;quot;io_ports.h&amp;quot; not found.">
+            <location file="src\vga.c" line="2"/>
+        </error>
+        <error id="missingInclude" severity="information" msg="Include file: &amp;quot;types.h&amp;quot; not found." verbose="Include file: &amp;quot;types.h&amp;quot; not found.">
+            <location file="src\vga.c" line="3"/>
+        </error>
+    </errors>
+</results>

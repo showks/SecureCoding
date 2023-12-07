@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<results version="2">
+    <cppcheck version="2.12.0"/>
+    <errors>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdio.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdio.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="ems.c" line="1"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;string.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;string.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="ems.c" line="2"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;stdlib.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;stdlib.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="ems.c" line="3"/>
+        </error>
+        <error id="missingIncludeSystem" severity="information" msg="Include file: &amp;lt;math.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results." verbose="Include file: &amp;lt;math.h&amp;gt; not found. Please note: Cppcheck does not need standard library headers to get proper results.">
+            <location file="ems.c" line="4"/>
+        </error>
+        <error id="bufferAccessOutOfBounds" severity="error" msg="Buffer is accessed out of bounds: e.phone" verbose="Buffer is accessed out of bounds: e.phone" cwe="788" file0="ems.c">
+            <location file="ems.c" line="241"/>
+        </error>
+        <error id="bufferAccessOutOfBounds" severity="error" msg="Buffer is accessed out of bounds: e.phone" verbose="Buffer is accessed out of bounds: e.phone" cwe="788" file0="ems.c">
+            <location file="ems.c" line="385"/>
+        </error>
+        <error id="incompatibleFileOpen" severity="warning" msg="The file &amp;#039;&amp;quot;employeeInfo.txt&amp;quot;&amp;#039; is opened for read and write access at the same time on different streams" verbose="The file &amp;#039;&amp;quot;employeeInfo.txt&amp;quot;&amp;#039; is opened for read and write access at the same time on different streams" cwe="664" file0="ems.c">
+            <location file="ems.c" line="42"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="204"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="210"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="216"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="221"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="230"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="235"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="240"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="245"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="252"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="348"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="354"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="360"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="365"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="374"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="379"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="384"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="389"/>
+        </error>
+        <error id="fflushOnInputStream" severity="portability" msg="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." verbose="fflush() called on input stream &amp;#039;stdin&amp;#039; may result in undefined behaviour on non-linux systems." cwe="398" file0="ems.c">
+            <location file="ems.c" line="476"/>
+        </error>
+        <error id="invalidscanf" severity="warning" msg="scanf() without field width limits can crash with huge input data." verbose="scanf() without field width limits can crash with huge input data. Add a field width specifier to fix this problem.&#10;&#10;Sample program that can crash:&#10;&#10;#include &amp;lt;stdio.h&amp;gt;&#10;int main()&#10;{&#10;    char c[5];&#10;    scanf(&amp;quot;%s&amp;quot;, c);&#10;    return 0;&#10;}&#10;&#10;Typing in 5 or more characters may make the program crash. The correct usage here is &amp;#039;scanf(&amp;quot;%4s&amp;quot;, c);&amp;#039;, as the maximum field width does not include the terminating null byte.&#10;Source: http://linux.die.net/man/3/scanf&#10;Source: http://www.opensource.apple.com/source/xnu/xnu-1456.1.26/libkern/stdio/scanf.c" cwe="119" file0="ems.c">
+            <location file="ems.c" line="55"/>
+        </error>
+        <error id="uninitvar" severity="warning" msg="Uninitialized variable: flag" verbose="Uninitialized variable: flag" cwe="457" file0="ems.c">
+            <location file="ems.c" line="457" info=""/>
+            <location file="ems.c" line="449" info="Assuming condition is false"/>
+        </error>
+        <error id="unusedStructMember" severity="style" msg="struct member &amp;#039;emp::jdate&amp;#039; is never used." verbose="struct member &amp;#039;emp::jdate&amp;#039; is never used." cwe="563" file0="ems.c">
+            <location file="ems.c" line="23"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: e" verbose="Unused variable: e" cwe="563" file0="ems.c">
+            <location file="ems.c" line="36"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: another" verbose="Unused variable: another" cwe="563" file0="ems.c">
+            <location file="ems.c" line="38"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="322"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: sal" verbose="Unused variable: sal" cwe="563" file0="ems.c">
+            <location file="ems.c" line="323"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="408"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="436"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="487"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="517"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="545"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="573"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="600"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="626"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="652"/>
+        </error>
+        <error id="unusedVariable" severity="style" msg="Unused variable: i" verbose="Unused variable: i" cwe="563" file0="ems.c">
+            <location file="ems.c" line="680"/>
+        </error>
+    </errors>
+</results>
